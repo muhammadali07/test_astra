@@ -1,7 +1,9 @@
 from selenium import webdriver
 import time
 from selenium.webdriver import Chrome
-driver = Chrome()
+import os
+# driver = Chrome()
+driver = webdriver.Chrome(executable_path=os.popen('which chromedriver').read().strip())
 
 options = webdriver.ChromeOptions()
 options.add_argument('--ignore-certificate-errors')
